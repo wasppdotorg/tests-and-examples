@@ -46,7 +46,7 @@ int main()
 		auto put_item_outcome = dynamodb_client.PutItem(put_item_request);
 		std::cout << 2 << std::endl;
 
-		if(put_item_outcome.IsSuccess())
+		if (put_item_outcome.IsSuccess())
 		{
 			std::cout << "put_item Sucess" << std::endl;
 			//std::cout << "PutItem Success Using IOPS " << putItemOutcome.GetResult().GetConsumedCapacity();
