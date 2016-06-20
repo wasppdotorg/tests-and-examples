@@ -22,38 +22,38 @@ int main()
 
 	try
 	{
-		Aws::Client::ClientConfiguration clientConfiguration;
-		Aws::DynamoDB::DynamoDBClient dynamoDbClient(clientConfiguration);
+		Aws::Client::ClientConfiguration client_configuration;
+		Aws::DynamoDB::DynamoDBClient dynamodb_client(client_configuration);
 
-		Aws::DynamoDB::Model::PutItemRequest putItemRequest;
+		Aws::DynamoDB::Model::PutItemRequest put_item_request;
 		{
-			putItemRequest.WithTableName("users");
+			put_item_request.WithTableName("users");
 		}
 
-		Aws::DynamoDB::Model::AttributeValue attrHashKey;
+		Aws::DynamoDB::Model::AttributeValue hash_key;
 		{
-			attrHashKey.SetS("user_id");
-			putItemRequest.AddItem("HashKey", attrHashKey);
+			hash_key.SetS("user_id_1");
+			put_item_request.AddItem("user_id", hash_key);
 		}
 
-		Aws::DynamoDB::Model::AttributeValue attrRangeKey;
+		Aws::DynamoDB::Model::AttributeValue range_key;
 		{
-			attrRangeKey.SetN("0");
-			putItemRequest.AddItem("platform_type", attrRangeKey);
+			range_key.SetN("0");
+			put_item_request.AddItem("platform_type", range_key);
 		}
 
 		std::cout << 1 << std::endl;
-		auto putItemOutcome = dynamoDbClient.PutItem(putItemRequest);
+		auto put_item_outcome = dynamodb_client.PutItem(put_item_request);
 		std::cout << 2 << std::endl;
 
-		if(putItemOutcome.IsSuccess())
+		if(put_item_outcome.IsSuccess())
 		{
-			std::cout << "PutItem Sucess" << std::endl;
+			std::cout << "put_item Sucess" << std::endl;
 			//std::cout << "PutItem Success Using IOPS " << putItemOutcome.GetResult().GetConsumedCapacity();
 		}
 		else
 		{
-			std::cout << "PutItem failed with error " << putItemOutcome.GetError().GetMessage();
+			std::cout << "put_item failed with error " << put_item_outcome.GetError().GetMessage();
 		}
 	}
 	catch (std::exception& e)
