@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="dynamodb" Database="">
-  <Project Name="dynamodb" Path="../../../../../data/Projects/tests-and-examples/dynamodb/dynamodb.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
