@@ -7,6 +7,7 @@
 
 * sudo nano /etc/postgresql/9.5/main/pg_hba.conf 
 * local	all	postres	peer
+
 <!--
 * local	all	postres	trust
 * local	all	postres	md5
