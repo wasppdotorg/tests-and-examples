@@ -11,11 +11,7 @@ include_directories (/usr/include /usr/local/include)
 
 find_library (MsgPack_LIBRARIES NAMES msgpack)
 
-<<<<<<< HEAD
 if (CMAKE_CXX_COMPILER_ID MATCHES Clang)
-=======
-if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
->>>>>>> c8517f0344dcf00f8e41ae42f563fb50702eebc7
 	set (CMAKE_COMPILER_IS_CLANGCXX 1)
 endif()
 
