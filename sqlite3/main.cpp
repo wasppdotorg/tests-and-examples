@@ -44,7 +44,7 @@ int main()
 	if (result == SQLITE_OK)
 	{
 		int bind_index = 0;
-		//{
+		//
 			sqlite3_bind_int(stmt_, ++bind_index, 1);
 			sqlite3_bind_int64(stmt_, ++bind_index, 2);
 			sqlite3_bind_double(stmt_, ++bind_index, 3.1f);
@@ -53,7 +53,7 @@ int main()
 			sqlite3_bind_text(stmt_, ++bind_index, "6", strlen("6"), 0);
 			sqlite3_bind_text(stmt_, ++bind_index, "7", strlen("7"), 0);
 			sqlite3_bind_text(stmt_, ++bind_index, "1970-01-01 00:00:00", strlen("1970-01-01 00:00:00"), 0);
-		//}
+		//
 
 		sqlite3_step(stmt_);
 	}
