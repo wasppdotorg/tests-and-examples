@@ -17,12 +17,11 @@ int main()
 
 	if (curl)
 	{
-		CURLcode res;
 		curl_easy_setopt(curl, CURLOPT_URL, "http://www.boost.org/LICENSE_1_0.txt");
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, curl_write_func);
 		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &html);
 
-		res = curl_easy_perform(curl);
+		CURLcode res = curl_easy_perform(curl);
 		if (res == CURLE_OK)
 		{
 			std::cout << html << std::endl;
