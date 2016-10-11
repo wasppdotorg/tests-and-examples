@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="dynamodb" Database="">
+  <Project Name="dynamodb" Path="dynamodb.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="dynamodb" ConfigName="Debug"/>
       <Project Name="dynamodb" ConfigName="Debug"/>
+      <Project Name="dynamodb" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="no">
+    <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
+      <Project Name="dynamodb" ConfigName="Release"/>
       <Project Name="dynamodb" ConfigName="Release"/>
       <Project Name="dynamodb" ConfigName="Release"/>
     </WorkspaceConfiguration>
