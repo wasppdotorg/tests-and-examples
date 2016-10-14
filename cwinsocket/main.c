@@ -23,13 +23,14 @@ int main()
 #ifndef _WIN32
 	snprintf(port_, 6, "%d", port);
 #else
+	sprintf_s(port_, 6, "%d", port);
+
 	WSADATA wsaData;
 	if ((rv = WSAStartup(MAKEWORD(2, 2), &wsaData)) != 0)
 	{
 		return 1;
 	}
 
-	sprintf_s(port_, 6, "%d", port);
 #endif
 
 	memset(&hints, 0, sizeof(hints));
