@@ -14,9 +14,11 @@ Redmine
 * echo '[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"' >> ~/.bashrc
 
 * mysql -u root -p
-* create database redmine;
-* grant all privileges on redmine.* to redmine@localhost identified by 'redmine';
-* flush privileges;
+```
+create database `redmine` default character set utf8 collate utf8_general_ci;
+grant all privileges on redmine.* to redmine@localhost identified by 'redmine_passwd';
+flush privileges;
+```
 
 * gem install passenger --no-ri --no-rdoc
 * passenger-install-nginx-module
@@ -78,7 +80,7 @@ production:
   database: redmine
   host: localhost
   username: redmine
-  password: "redmine"
+  password: "redmine_passwd"
   encoding: utf8
 ```
 
