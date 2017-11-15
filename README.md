@@ -5,7 +5,7 @@ SVN
 * sudo apt install subversion apache2 libapache2-svn apache2-utils
 * sudo mkdir -p /var/www/svn/
 * sudo svnadmin create /var/www/svn/test
-* sudo chown -R nobody:nogroup /var/www/svn/test
+* sudo chown -R www-data:www-data /var/www/svn/test
 
 * sudo vim /etc/apache2/sites-available/default-svn.conf
 ```
